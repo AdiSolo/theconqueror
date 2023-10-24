@@ -24,10 +24,9 @@ body > * {
       display: flex;
 
       .tab {
+        display: flex;
+        align-items: center;
         font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         padding: 9px 12px;
         text-transform: uppercase;
         cursor: pointer;
@@ -49,14 +48,21 @@ body > * {
   /* Services CSS */
   .services {
     margin: 65px 0 72px 0;
+    padding: 0 84px;
+    @include respond-to(medium) {
+      padding: 0;
+    }
     .cards {
       display: grid;
       width: 100%;
       grid-template-columns: 1fr 1fr 1fr;
+      place-items: center;
       gap: 24px;
-      padding: 0 84px;
-      cursor: pointer;
 
+      cursor: pointer;
+      @include respond-to(medium) {
+        grid-template-columns: 1fr 1fr;
+      }
       .card {
         width: 100%;
         max-width: 248px;
@@ -106,10 +112,16 @@ body > * {
     .top-bar {
       border-bottom: 1px solid $input-b-color;
       padding-bottom: 9px;
+      @include respond-to(medium) {
+        flex-direction: column;
+      }
       .actions {
         display: flex;
         align-items: center;
         gap: 16px;
+        @include respond-to(medium) {
+          justify-content: space-between;
+        }
       }
     }
   }
@@ -142,6 +154,9 @@ body > * {
             align-items: center;
             gap: 8px;
             margin-bottom: 8px;
+            @include respond-to(medium) {
+              flex-wrap: wrap;
+            }
             &:not(:first-child)::before {
               content: "AND";
               position: absolute;
@@ -155,7 +170,7 @@ body > * {
             }
             .connector {
               position: absolute;
-              top: 50%;
+              top: 16px;
               left: -12px;
             }
           }
@@ -163,7 +178,7 @@ body > * {
       }
     }
     .more {
-      margin: 15px 0 25px 0;
+      margin: 7px 0 25px 0;
     }
     .add-step {
       margin-bottom: 200px;

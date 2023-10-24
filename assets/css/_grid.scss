@@ -1,8 +1,12 @@
+@import "mixins";
+
 .container {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  //   padding: 0 100px;
+  @include respond-to(medium) {
+    padding: 0 24px;
+  }
 }
 .container-fluid {
   width: 100%;
