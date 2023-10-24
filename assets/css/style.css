@@ -40,7 +40,89 @@ body {
 
 .flex-just-s-b {
   display: flex;
+  width: 100%;
   justify-content: space-between;
+}
+
+/* Colors */
+.title {
+  font-size: 18px;
+  font-style: normal;
+}
+
+.text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 4px;
+  background: rgba(45, 186, 238, 0.1);
+  padding: 7px 0 8px 0;
+  cursor: pointer;
+}
+
+.cta-text {
+  color: #2dbaee;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.selector {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid #d8ddef;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.selector .icon {
+  width: 12px;
+  height: 12px;
+  background-image: url(/assets/img/icon-calendar.svg);
+  background-repeat: no-repeat;
+}
+.selector .text {
+  font-weight: 700;
+}
+.selector .arrow {
+  width: 6px;
+  height: 5px;
+  background-image: url(/assets/img/arrow.png);
+  background-repeat: no-repeat;
+}
+
+.input-group {
+  display: inline-flex;
+}
+.input-group .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-image: url("/assets/img/pi-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #d8ddef;
+  border-radius: 4px 0px 0px 4px;
+}
+.input-group input {
+  height: 32px;
+  border: 1px solid #d8ddef;
+  border-left: none;
+  padding: 7px 0 8px 0;
+  border-radius: 0px 4px 4px 0px;
 }
 
 /* Colors */
@@ -52,6 +134,7 @@ body > * {
   /* Header CSS */
   /* Filter CSS */
   /* Services CSS */
+  /* Funnel CSS */
 }
 .app .header {
   background-color: #ffd500;
@@ -116,17 +199,56 @@ body > * {
   padding: 47px 0 24px 0;
 }
 .app .services .cards .card .title {
-  font-size: 18px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 8px;
 }
 .app .services .cards .card .text {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   color: #666880;
   padding: 0 24px;
+}
+.app .funnel .top-bar {
+  border-bottom: 1px solid #d8ddef;
+  padding-bottom: 9px;
+}
+.app .funnel .top-bar .actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.app .steps {
+  display: flex;
+  flex-direction: column;
+}
+.app .steps .step .step-text {
+  color: #666880;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 16px 0;
+}
+.app .steps .step .step-text .name {
+  font-size: 14px;
+  color: #000;
+  padding-left: 8px;
+}
+.app .steps .step .steps-group {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.app .steps .step .steps-group .steps-filters {
+  display: flex;
+  flex-direction: column;
+}
+.app .steps .step .steps-group .steps-filters .group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.app .steps .more {
+  margin: 15px 0 25px 0;
+}
+.app .steps .add-step {
+  margin-bottom: 200px;
 }/*# sourceMappingURL=style.css.map */

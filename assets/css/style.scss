@@ -73,21 +73,65 @@ body > * {
           padding: 47px 0 24px 0;
         }
         .title {
-          font-size: 18px;
-          font-style: normal;
           font-weight: 700;
           line-height: normal;
           margin-bottom: 8px;
         }
         .text {
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
           color: $text-special;
           padding: 0 24px;
         }
       }
+    }
+  }
+  /* Funnel CSS */
+  .funnel {
+    .top-bar {
+      border-bottom: 1px solid $input-b-color;
+      padding-bottom: 9px;
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    .step {
+      .step-text {
+        color: $text-special;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 16px 0;
+        .name {
+          font-size: 14px;
+          color: #000;
+          padding-left: 8px;
+        }
+      }
+      .steps-group {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        .steps-filters {
+          display: flex;
+          flex-direction: column;
+          .group {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+    .more {
+      margin: 15px 0 25px 0;
+    }
+    .add-step {
+      margin-bottom: 200px;
     }
   }
 }
