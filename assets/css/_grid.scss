@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  //   padding: 0 100px;
+}
+.container-fluid {
+  width: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-just-s-b {
+  display: flex;
+  justify-content: space-between;
+}

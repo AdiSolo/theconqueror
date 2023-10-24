@@ -1,6 +1,93 @@
 @import "base";
+@import "grid";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap");
 @import "elements";
 @import "variables";
 @import "mixins";
+body > * {
+  font-family: "Lato", sans-serif;
+}
 .app {
+  /* Header CSS */
+  .header {
+    background-color: $primary-color;
+    .logo {
+      padding: 25px 0;
+    }
+  }
+
+  /* Filter CSS */
+  .filters {
+    border-bottom: 1px solid #edeef7;
+    margin-top: 25px;
+    z-index: 1;
+    .tabs {
+      display: flex;
+
+      .tab {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 9px 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &.active {
+          font-weight: 700;
+          border: 1px solid #edeef7;
+          border-bottom: #fff;
+          border-radius: 4px 4px 0px 0px;
+          z-index: 100;
+        }
+      }
+    }
+  }
+  /* Services CSS */
+  .services {
+    margin: 65px 0 72px 0;
+    .cards {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      padding: 0 84px;
+      cursor: pointer;
+      .card {
+        width: 100%;
+        max-width: 248px;
+        height: 217px;
+        border-radius: 8px;
+        border: 1px solid $primary-color;
+        .w-flex-col {
+          display: flex;
+          flex-direction: column;
+          & > * {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+        .icon {
+          padding: 47px 0 24px 0;
+        }
+        .title {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 8px;
+        }
+        .text {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: $text-special;
+          padding: 0 24px;
+        }
+      }
+    }
+  }
 }
