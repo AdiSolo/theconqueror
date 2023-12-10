@@ -1,3 +1,6 @@
+/*
+----- Add Toogle event for mobile menu -----
+*/
 document.addEventListener("DOMContentLoaded", function () {
   const myDiv = document.getElementById("hamburger-menu");
 
@@ -7,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.toggle("active");
   });
 });
-
+/*
+----- Fetch data and return product cards -----
+*/
 fetch("challenges.json")
   .then((response) => response.json())
   .then((data) => {
@@ -33,7 +38,7 @@ fetch("challenges.json")
               </div>
         `;
       })
-      .join(""); // Join the array of strings into a single string
+      .join("");
 
     // Select the div with ID 'challenges-grid' and set its inner HTML to the generated HTML
     document.getElementById("challenges-grid").innerHTML = productHTML;
@@ -41,19 +46,11 @@ fetch("challenges.json")
   })
   .catch((error) => console.error("Error:", error));
 
-// Script to be included on the product listing page
-
+/*
+----- Add items in local storage on click event -----
+*/
 // Initialize an empty array to store product details
 let cartItems = [];
-
-// Function to handle adding items to the cart
-function addToCart(productId, productName) {
-  // Add the product ID and name to the cartItems array
-  cartItems.push({ id: productId, name: productName });
-
-  // Store the updated array in localStorage
-  localStorage.setItem("cart", JSON.stringify(cartItems));
-}
 
 function attachEventListenersToButtons() {
   document.querySelectorAll(".buy-btn").forEach((item) => {
@@ -70,6 +67,11 @@ function attachEventListenersToButtons() {
     });
   });
 }
+
+/*
+----- Display cart data from local storage -----
+*/
+
 function displayCartItems() {
   // Retrieve the cart items from localStorage
   const storedCartItems = JSON.parse(localStorage.getItem("cart"));

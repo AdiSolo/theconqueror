@@ -3,72 +3,72 @@
     "id": "1",
     "image": "assets/img/kj-bg.webp",
     "medal": "assets/img/kj-medal.svg",
-    "title": "Product Title 1",
+    "title": "Mount Kilimanjaro",
     "price": "100",
     "description": {
-      "distance": "10km",
-      "postcards": "5",
-      "streetview": "available"
+      "distance": "60 mi / 97 km",
+      "postcards": "5 Virtual Postcards",
+      "streetview": "No StreetView"
     }
   },
   {
     "id": "2",
     "image": "assets/img/kj-bg.webp",
     "medal": "assets/img/aw-medal.svg",
-    "title": "Product Title 2",
+    "title": "Angkor Wat",
     "price": "100",
     "description": {
-      "distance": "15km",
-      "postcards": "10",
-      "streetview": "not available"
+      "distance": "20 mi / 32 km",
+      "postcards": "4 Virtual Postcard",
+      "streetview": "Has StreetView"
     }
   },
   {
     "id": "3",
     "image": "assets/img/kj-bg.webp",
     "medal": "assets/img/inc-medal.svg",
-    "title": "Product Title 3",
+    "title": "Inca Trail",
     "price": "100",
     "description": {
-      "distance": "5km",
-      "postcards": "3",
-      "streetview": "available"
+      "distance": "26 mi / 42 km",
+      "postcards": "4 Virtual Postcards",
+      "streetview": "Has StreetView"
     }
   },
   {
     "id": "4",
     "image": "assets/img/kj-bg.webp",
     "medal": "assets/img/be-medal.svg",
-    "title": "Product Title 3",
+    "title": "Berlin Wall",
     "price": "100",
     "description": {
-      "distance": "5km",
-      "postcards": "3",
-      "streetview": "available"
+      "distance": "30 mi / 48 km",
+      "postcards": "5 Virtual Postcard",
+      "streetview": "Has StreetView"
     }
   },
   {
     "id": "5",
     "image": "assets/img/kj-bg.webp",
     "medal": "assets/img/fwlr-medal.svg",
-    "title": "Product Title 3",
+    "title": "Flower Route",
     "price": "100",
     "description": {
-      "distance": "5km",
-      "postcards": "3",
-      "streetview": "available"
+      "distance": "41 mi / 66 km",
+      "postcards": "4 Virtual Postcards",
+      "streetview": "Has StreetView"
     }
   },
   {
     "id": "6",
     "image": "assets/img/kj-bg.webp",
     "medal": "assets/img/trans-medal.svg",
-    "title": "Product Title 3",
+    "title": "Transylvania",
     "price": "100",
     "description": {
-      "distance": "5km",
-      "postcards": "3",
-      "streetview": "available"
+      "distance": "231 mi / 372 km",
+      "postcards": "7 Virtual Postcards",
+      "streetview": "Has StreetView"
     }
   }
 ]
