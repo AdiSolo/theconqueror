@@ -105,7 +105,7 @@ body > * {
     .filters {
       position: relative;
       align-self: flex-end;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       z-index: 10;
       select {
         width: 197px;
@@ -218,7 +218,7 @@ body > * {
     }
     .to-cart {
       display: flex;
-      margin: 0 auto;
+      margin: 24px auto;
       .btn {
         min-width: 300px;
         background: transparent;

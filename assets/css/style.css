@@ -277,7 +277,7 @@ body > * {
 .conqueror-app .all-challenges .filters {
   position: relative;
   align-self: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   z-index: 10;
 }
 .conqueror-app .all-challenges .filters select {
@@ -387,7 +387,7 @@ body > * {
 }
 .conqueror-app .all-challenges .to-cart {
   display: flex;
-  margin: 0 auto;
+  margin: 24px auto;
 }
 .conqueror-app .all-challenges .to-cart .btn {
   min-width: 300px;
