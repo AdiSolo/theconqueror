@@ -3,156 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bloomreach App</title>
+    <title>The Conquere</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="app">
+    <div class="conqueror-app">
       <div class="container-fluid">
         <section class="header">
-          <div class="container">
-            <div class="logo">
-              <img src="assets/img/bloomreach-logo.svg" alt="logo" />
+          <div class="top">
+            <div class="container">
+              <p>THE LORD OF THE RINGS Virtual Challenges are HERE!</p>
             </div>
           </div>
-        </section>
-        <section class="filters">
-          <div class="container">
-            <div class="tabs">
-              <span class="tab active">Customer properties</span>
-              <span class="tab">Events</span>
-              <span class="tab">Definitions</span>
-              <span class="tab">Mapping</span>
+          <div class="navigation">
+            <div class="container">
+              <div class="nav-menu">
+                <a href="http://" target="_blank">Challenges</a>
+                <a href="http://" target="_blank">LOTR</a>
+                <a href="http://" target="_blank">Merch</a>
+                <a href="http://" target="_blank">Corporate</a>
+                <a href="http://" target="_blank">Shop</a>
+
+                <a href="http://" target="_blank">
+                  <img src="./assets/img/cart-icon.svg" alt="cart-icon" />
+                </a>
+              </div>
             </div>
           </div>
-          <div class="separator"></div>
         </section>
         <div class="container">
-          <section class="services">
-            <div class="cards">
-              <div class="card b-primary">
-                <div class="w-flex-col">
-                  <div class="icon">
-                    <img src="assets/img/icon-customers.svg" />
-                  </div>
-                  <h3 class="title">Customers</h3>
-                  <p class="text">
-                    Import new customers with custom attributes.
-                  </p>
-                </div>
-              </div>
-              <div class="card b-secondary">
-                <div class="w-flex-col">
-                  <div class="icon">
-                    <img src="assets/img/icon-customers.svg" />
-                  </div>
-                  <h3 class="title">Catalogs</h3>
-                  <p class="text">Ut cursus maximus lorem eget egestas.</p>
-                </div>
-              </div>
-              <div class="card b-red">
-                <div class="w-flex-col">
-                  <div class="icon">
-                    <img src="assets/img/icon-customers.svg" />
-                  </div>
-                  <h3 class="title">Vouchers</h3>
-                  <p class="text">
-                    Nam et egestas mauris. Morbi varius, magna in viverra.
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="w-flex-col">
-                  <div class="icon">
-                    <img src="assets/img/icon-customers.svg" />
-                  </div>
-                  <h3 class="title b-primary">Emails</h3>
-                  <p class="text">
-                    Import new customers with cusotm attributes.
-                  </p>
-                </div>
-              </div>
-              <div class="card b-secondary">
-                <div class="w-flex-col">
-                  <div class="icon">
-                    <img src="assets/img/icon-customers.svg" />
-                  </div>
-                  <h3 class="title">Analyses</h3>
-                  <p class="text">Ut cursus maximus lorem eget egestas.</p>
-                </div>
-              </div>
+          <section class="all-challenges">
+            <div class="title">
+              <h1>All Challenges</h1>
             </div>
-          </section>
-          <section class="funnel">
-            <div class="top-bar flex-row flex-just-s-b">
-              <h2 class="title">Funnel Steps</h2>
-              <div class="actions">
-                <div class="cta-text">+ Funnel completation period</div>
-                <div class="selector period">
-                  <span class="icon"></span>
-                  <span class="text">Lifetime</span>
-                  <span class="arrow"></span>
-                </div>
-              </div>
+            <div class="filters">
+              <label class="text">Sort by:</label>
+              <select name="sort-by" id="filter">
+                <option value="popular">Popular</option>
+                <option value="new">Newest</option>
+              </select>
             </div>
-            <div class="steps">
-              <div class="step">
-                <div class="step-text text">
-                  1. Step <span class="name">first_session</span>
-                </div>
-                <div class="steps-group">
-                  <div class="selector session">
-                    <span class="icon"></span>
-                    <span class="text">firs_session</span>
-                    <span class="arrow"></span>
-                  </div>
-                  <div class="steps-filters">
-                    <div class="group">
-                      <div class="connector">
-                        <span class="line-1"></span>
-                        <span class="line-2"></span>
-                        <span class="line-3"></span>
-                      </div>
-                      <div class="selector">
-                        <span class="icon"></span>
-                        <span class="text">device</span>
-                        <span class="arrow"></span>
-                      </div>
-                      <div class="selector">
-                        <span class="icon"></span>
-                        <span class="text">equals</span>
-                        <span class="arrow"></span>
-                      </div>
-                      <div class="input-group">
-                        <span class="icon"></span>
-                        <input type="text" />
-                      </div>
-                    </div>
-                    <div class="group">
-                      <div class="selector">
-                        <span class="icon"></span>
-                        <span class="text">city</span>
-                        <span class="arrow"></span>
-                      </div>
-                      <div class="selector">
-                        <span class="icon"></span>
-                        <span class="text">equals</span>
-                        <span class="arrow"></span>
-                      </div>
-                      <div class="input-group">
-                        <span class="icon"></span>
-                        <input type="text" />
-                      </div>
-                    </div>
-                    <span class="cta-text more">Refine more</span>
-                  </div>
-                </div>
-              </div>
-              <div class="btn cta-text add-step">+ Add funnel step</div>
+            <div id="challenges-grid"></div>
+            <div class="to-cart">
+              <a href="/summary.html" class="btn">Go to cart</a>
             </div>
           </section>
         </div>
+        <section class="newsletter">
+          <div class="wrapper center-x-y">
+            <p>Get notified when we release a new challenge -></p>
+            <form action="">
+              <input
+                type="email"
+                name="email"
+                id="user_email"
+                placeholder="Your email address"
+              />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </section>
+        <section class="footer">
+          <div class="container">
+            <div class="col">
+              <img src="assets/img/logo-white.svg" alt="logo" class="f-logo" />
+            </div>
+            <div class="col">
+              <div class="name">ABOUT</div>
+              <div class="nav-menu-column">
+                <a href="#" target="_blank">About us </a>
+                <a href="http://" target="_blank">Careers</a>
+                <a href="http://" target="_blank">Blog</a>
+                <a href="http://" target="_blank">Media</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="name">ABOUT</div>
+              <div class="nav-menu-column">
+                <a href="#" target="_blank">About us </a>
+                <a href="http://" target="_blank">Careers</a>
+                <a href="http://" target="_blank">Blog</a>
+                <a href="http://" target="_blank">Media</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="name">PRIVACY NOTICE</div>
+              <p>
+                To read our privacy notice including our GDPR policy, please
+                click here.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </body>
+  <script src="scripts.js"></script>
 </html>

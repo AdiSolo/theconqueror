@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Conquer</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="conqueror-app">
+      <div class="container-fluid">
+        <section class="header">
+          <div class="top">
+            <div class="container">
+              <p>THE LORD OF THE RINGS Virtual Challenges are HERE!</p>
+            </div>
+          </div>
+          <div class="navigation">
+            <div class="container">
+              <div class="nav-menu">
+                <a href="http://" target="_blank">Challenges</a>
+                <a href="http://" target="_blank">LOTR</a>
+                <a href="http://" target="_blank">Merch</a>
+                <a href="http://" target="_blank">Corporate</a>
+                <a href="http://" target="_blank">Shop</a>
+
+                <a href="http://" target="_blank">
+                  <img src="./assets/img/cart-icon.svg" alt="cart-icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container">
+          <div class="summary">
+            <h2>Order Summary</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Product ID</th>
+                  <th>Title</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody id="cart-summary">
+                <!-- Product rows will be inserted here -->
+              </tbody>
+              <tfoot>
+                <tr class="total-row">
+                  <td colspan="2">Total</td>
+                  <td id="total-price"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>

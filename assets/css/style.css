@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -25,7 +25,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 @media (min-width: 0) and (max-width: 768px) {
@@ -50,9 +50,11 @@ body {
 }
 
 /* Colors */
-.title {
-  font-size: 18px;
+h1 {
+  font-size: 45px;
   font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 49.5px */
 }
 
 .separator {
@@ -65,17 +67,23 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 110%; /* 15.4px */
 }
 
 .btn {
   display: flex;
+  width: 100%;
+  max-width: 300px;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  border-radius: 4px;
-  background: rgba(45, 186, 238, 0.1);
-  padding: 7px 0 8px 0;
+  gap: 10px;
+  background: #000;
+  border-radius: 5px;
+  line-height: 160%; /* 25.6px */
   cursor: pointer;
 }
 
@@ -122,7 +130,7 @@ body {
   align-items: center;
   width: 32px;
   height: 32px;
-  background-image: url("../img/pi-icon.svg");
+  background-image: url("/assets/img/pi-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #d8ddef;
@@ -163,185 +171,296 @@ body {
 
 /* Colors */
 body > * {
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-.app {
-  /* Header CSS */
-  /* Filter CSS */
-  /* Services CSS */
-  /* Funnel CSS */
+.conqueror-app .header .top {
+  background-color: #e0c26b;
 }
-.app .header {
-  background-color: #ffd500;
-}
-.app .header .logo {
-  padding: 25px 0;
-}
-.app .filters {
-  margin-top: 25px;
-  z-index: 1;
-}
-.app .filters .tabs {
-  display: flex;
-}
-.app .filters .tabs .tab {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  padding: 9px 12px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.app .filters .tabs .tab.active {
-  font-weight: 700;
-  border: 1px solid #edeef7;
-  border-bottom: 1px solid #fff;
-  border-radius: 4px 4px 0px 0px;
-  z-index: 100;
-}
-.app .filters .separator {
+.conqueror-app .header .top div {
   position: relative;
-  bottom: 1px;
-  z-index: 1;
+  text-align: center;
 }
-.app .services {
-  margin: 65px 0 72px 0;
-  padding: 0 84px;
+.conqueror-app .header .top div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 120px;
+  background-image: url(/assets/img/logo.svg);
+  background-repeat: no-repeat;
+  z-index: 1000;
 }
-@media (min-width: 0) and (max-width: 768px) {
-  .app .services {
-    padding: 0;
-  }
+.conqueror-app .header .top div p {
+  padding: 10px 0;
 }
-.app .services .cards {
-  display: grid;
+.conqueror-app .header .navigation {
+  background-color: #000;
+}
+.conqueror-app .header .navigation div {
+  display: flex;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-  gap: 24px;
-  cursor: pointer;
+  justify-content: flex-end;
+}
+.conqueror-app .header .navigation div .nav-menu {
+  display: inline-flex;
+  gap: 35px;
+}
+.conqueror-app .header .navigation div .nav-menu a {
+  font-size: 16px;
+  color: #fff;
+  line-height: 23px; /* 143.75% */
+  padding: 21px 0;
+}
+.conqueror-app .all-challenges {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 58px;
+}
+.conqueror-app .all-challenges .title {
+  margin-top: 19px;
+}
+.conqueror-app .all-challenges .title h1 {
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+.conqueror-app .all-challenges .filters {
+  position: relative;
+  align-self: flex-end;
+  margin-bottom: 20px;
+  z-index: 10;
+}
+.conqueror-app .all-challenges .filters select {
+  width: 197px;
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+  background: #fff;
+  padding: 13px 15px;
+}
+.conqueror-app .all-challenges #challenges-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 19px;
 }
 @media (min-width: 0) and (max-width: 768px) {
-  .app .services .cards {
+  .conqueror-app .all-challenges #challenges-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
-.app .services .cards .card {
+.conqueror-app .all-challenges #challenges-grid .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 203px;
+  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+  padding: 15px;
+  margin-top: 18px;
+  z-index: 1;
+}
+@media (min-width: 0) and (max-width: 768px) {
+  .conqueror-app .all-challenges #challenges-grid .card {
+    width: 100%;
+  }
+}
+.conqueror-app .all-challenges #challenges-grid .card > div {
+  flex: 1;
+}
+.conqueror-app .all-challenges #challenges-grid .card .image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.conqueror-app .all-challenges #challenges-grid .card .image .medal {
   width: 100%;
-  max-width: 248px;
-  height: 217px;
-  border-radius: 8px;
-  border: 1px solid #ffd500;
+  margin-top: -65px;
 }
-.app .services .cards .card.b-primary {
-  border-color: #ffd500;
+@media (min-width: 0) and (max-width: 768px) {
+  .conqueror-app .all-challenges #challenges-grid .card .image .medal {
+    width: 100%;
+  }
 }
-.app .services .cards .card.b-secondary {
-  border-color: #2dbaee;
+.conqueror-app .all-challenges #challenges-grid .card .image .medal img {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+  z-index: 1000;
 }
-.app .services .cards .card.b-red {
-  border-color: #f84cac;
+.conqueror-app .all-challenges #challenges-grid .card .image .medal img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 146px;
+  background: radial-gradient(50% 50% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0.416667) 41.67%, rgba(0, 0, 0, 0) 100%);
+  background-position: center;
+  z-index: 1;
 }
-.app .services .cards .card:hover {
-  box-shadow: 0px 4px 8px 0px rgba(102, 103, 128, 0.25);
+.conqueror-app .all-challenges #challenges-grid .card .title {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 120%; /* 21.6px */
 }
-.app .services .cards .card .w-flex-col {
+.conqueror-app .all-challenges #challenges-grid .card .details-group {
+  padding: 12px 0;
+}
+.conqueror-app .all-challenges #challenges-grid .card .details-group p {
+  color: #323232;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 160%; /* 22.4px */
+}
+.conqueror-app .all-challenges #challenges-grid .card .details-group .distance {
+  color: #323232;
+  font-weight: 500;
+  padding-bottom: 17.5px;
+}
+.conqueror-app .all-challenges #challenges-grid .card .buy-btn {
   display: flex;
-  flex-direction: column;
-}
-.app .services .cards .card .w-flex-col > * {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  max-width: 174px;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  gap: 10px;
+  background: #000;
+  border-radius: 5px;
+  line-height: 160%; /* 25.6px */
+  cursor: pointer;
 }
-.app .services .cards .card .icon {
-  padding: 47px 0 24px 0;
-}
-.app .services .cards .card .title {
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 8px;
-}
-.app .services .cards .card .text {
-  color: #666880;
-  padding: 0 24px;
-}
-.app .funnel .top-bar {
-  border-bottom: 1px solid #d8ddef;
-  padding-bottom: 9px;
-}
-@media (min-width: 0) and (max-width: 768px) {
-  .app .funnel .top-bar {
-    flex-direction: column;
-  }
-}
-.app .funnel .top-bar .actions {
+.conqueror-app .all-challenges .to-cart {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  margin: 0 auto;
 }
-@media (min-width: 0) and (max-width: 768px) {
-  .app .funnel .top-bar .actions {
-    justify-content: space-between;
-  }
-}
-.app .steps {
-  display: flex;
-  flex-direction: column;
-}
-.app .steps .step .step-text {
-  color: #666880;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 16px 0;
-}
-.app .steps .step .step-text .name {
-  font-size: 14px;
+.conqueror-app .all-challenges .to-cart .btn {
+  min-width: 300px;
+  background: transparent;
+  border: 1px solid #262626;
   color: #000;
-  padding-left: 8px;
 }
-.app .steps .step .steps-group {
+.conqueror-app .newsletter {
+  width: 100%;
+  background: #262626;
+}
+.conqueror-app .newsletter .wrapper {
   display: flex;
+  width: 100%;
+  height: 87px;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
   gap: 16px;
 }
-.app .steps .step .steps-group .steps-filters {
-  display: flex;
-  flex-direction: column;
-}
-.app .steps .step .steps-group .steps-filters .group {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-}
 @media (min-width: 0) and (max-width: 768px) {
-  .app .steps .step .steps-group .steps-filters .group {
-    flex-wrap: wrap;
+  .conqueror-app .newsletter .wrapper {
+    flex-direction: column;
+    height: auto;
   }
 }
-.app .steps .step .steps-group .steps-filters .group:not(:first-child)::before {
-  content: "AND";
-  position: absolute;
-  left: -43px;
-  color: #666880;
-  font-size: 12px;
-  font-style: normal;
+.conqueror-app .newsletter .wrapper p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 160%; /* 28.8px */
+}
+.conqueror-app .newsletter .wrapper form {
+  display: flex;
+  gap: 13px;
+}
+.conqueror-app .newsletter .wrapper form > * {
+  border: none;
+}
+.conqueror-app .newsletter .wrapper form input {
+  display: flex;
+  width: 262px;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+@media (min-width: 0) and (max-width: 768px) {
+  .conqueror-app .newsletter .wrapper form input {
+    width: 200px;
+  }
+}
+.conqueror-app .newsletter .wrapper form button {
+  display: flex;
+  width: 125px;
+  height: 42px;
+  background: #d7be69;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7.229px;
+  cursor: pointer;
+}
+.conqueror-app .footer {
+  background: #000;
+  padding-bottom: 60px;
+}
+.conqueror-app .footer div {
+  display: flex;
+}
+@media (min-width: 0) and (max-width: 768px) {
+  .conqueror-app .footer div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.conqueror-app .footer div .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-top: 34px;
+}
+.conqueror-app .footer div .col .f-logo {
+  width: 100px;
+  height: 151px;
+}
+.conqueror-app .footer div .col .name {
+  color: #d7be69;
+  font-size: 18px;
   font-weight: 700;
-  line-height: normal;
+  line-height: 160%; /* 28.8px */
+  margin-bottom: 10px;
 }
-.app .steps .step .steps-group .steps-filters .group .connector {
-  position: absolute;
-  top: 16px;
-  left: -12px;
+.conqueror-app .footer div .col .nav-menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.app .steps .more {
-  margin: 7px 0 25px 0;
+.conqueror-app .footer div .col .nav-menu-column a {
+  font-size: 14px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
 }
-.app .steps .add-step {
-  margin-bottom: 200px;
+.conqueror-app .summary {
+  padding-top: 80px;
+}
+.conqueror-app .summary h2 {
+  text-align: center;
+  padding-bottom: 24px;
+}
+.conqueror-app .summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.conqueror-app .summary th,
+.conqueror-app .summary td {
+  border: 1px solid #d4d4d4;
+  padding: 8px;
+  text-align: left;
+  border-radius: 5px;
+}
+.conqueror-app .summary .total-row {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "image": "assets/img/kj-bg.webp",
+    "medal": "assets/img/kj-medal.svg",
+    "title": "Product Title 1",
+    "price": "100",
+    "description": {
+      "distance": "10km",
+      "postcards": "5",
+      "streetview": "available"
+    }
+  },
+  {
+    "id": "2",
+    "image": "assets/img/kj-bg.webp",
+    "medal": "assets/img/aw-medal.svg",
+    "title": "Product Title 2",
+    "price": "100",
+    "description": {
+      "distance": "15km",
+      "postcards": "10",
+      "streetview": "not available"
+    }
+  },
+  {
+    "id": "3",
+    "image": "assets/img/kj-bg.webp",
+    "medal": "assets/img/inc-medal.svg",
+    "title": "Product Title 3",
+    "price": "100",
+    "description": {
+      "distance": "5km",
+      "postcards": "3",
+      "streetview": "available"
+    }
+  },
+  {
+    "id": "4",
+    "image": "assets/img/kj-bg.webp",
+    "medal": "assets/img/be-medal.svg",
+    "title": "Product Title 3",
+    "price": "100",
+    "description": {
+      "distance": "5km",
+      "postcards": "3",
+      "streetview": "available"
+    }
+  },
+  {
+    "id": "5",
+    "image": "assets/img/kj-bg.webp",
+    "medal": "assets/img/fwlr-medal.svg",
+    "title": "Product Title 3",
+    "price": "100",
+    "description": {
+      "distance": "5km",
+      "postcards": "3",
+      "streetview": "available"
+    }
+  },
+  {
+    "id": "6",
+    "image": "assets/img/kj-bg.webp",
+    "medal": "assets/img/trans-medal.svg",
+    "title": "Product Title 3",
+    "price": "100",
+    "description": {
+      "distance": "5km",
+      "postcards": "3",
+      "streetview": "available"
+    }
+  }
+]
