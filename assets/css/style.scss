@@ -24,6 +24,9 @@ body > * {
           background-image: url(/assets/img/logo.svg);
           background-repeat: no-repeat;
           z-index: 1000;
+          @include respond-to(medium) {
+            display: none;
+          }
         }
         p {
           padding: 10px 0;
@@ -32,18 +35,56 @@ body > * {
     }
     .navigation {
       background-color: #000;
-      div {
+      & > div {
         display: flex;
         width: 100%;
         justify-content: flex-end;
         .nav-menu {
-          display: inline-flex;
-          gap: 35px;
-          a {
-            font-size: 16px;
-            color: #fff;
-            line-height: 23px; /* 143.75% */
-            padding: 21px 0;
+          display: flex;
+          width: 100%;
+          @include respond-to(medium) {
+            flex-direction: column;
+            & > * {
+              flex: 1;
+            }
+          }
+          .menu {
+            display: flex;
+            gap: 35px;
+            @include respond-to(medium) {
+              display: none;
+              order: 2;
+              &.active {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 0;
+              }
+            }
+            a {
+              font-size: 16px;
+              color: #fff;
+              line-height: 23px; /* 143.75% */
+              padding: 21px 0;
+            }
+          }
+          .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            gap: 35px;
+            @include respond-to(medium) {
+              order: 1;
+              align-self: end;
+            }
+            img {
+              width: 25px;
+            }
+            a {
+              padding: 21px 0;
+            }
           }
         }
       }
@@ -107,7 +148,6 @@ body > * {
 
           .medal {
             width: 100%;
-
             margin-top: -65px;
             @include respond-to(medium) {
               width: 100%;

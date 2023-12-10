@@ -192,25 +192,74 @@ body > * {
   background-repeat: no-repeat;
   z-index: 1000;
 }
+@media (min-width: 0) and (max-width: 768px) {
+  .conqueror-app .header .top div::before {
+    display: none;
+  }
+}
 .conqueror-app .header .top div p {
   padding: 10px 0;
 }
 .conqueror-app .header .navigation {
   background-color: #000;
 }
-.conqueror-app .header .navigation div {
+.conqueror-app .header .navigation > div {
   display: flex;
   width: 100%;
   justify-content: flex-end;
 }
-.conqueror-app .header .navigation div .nav-menu {
-  display: inline-flex;
+.conqueror-app .header .navigation > div .nav-menu {
+  display: flex;
+  width: 100%;
+}
+@media (min-width: 0) and (max-width: 768px) {
+  .conqueror-app .header .navigation > div .nav-menu {
+    flex-direction: column;
+  }
+  .conqueror-app .header .navigation > div .nav-menu > * {
+    flex: 1;
+  }
+}
+.conqueror-app .header .navigation > div .nav-menu .menu {
+  display: flex;
   gap: 35px;
 }
-.conqueror-app .header .navigation div .nav-menu a {
+@media (min-width: 0) and (max-width: 768px) {
+  .conqueror-app .header .navigation > div .nav-menu .menu {
+    display: none;
+    order: 2;
+  }
+  .conqueror-app .header .navigation > div .nav-menu .menu.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+}
+.conqueror-app .header .navigation > div .nav-menu .menu a {
   font-size: 16px;
   color: #fff;
   line-height: 23px; /* 143.75% */
+  padding: 21px 0;
+}
+.conqueror-app .header .navigation > div .nav-menu .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  gap: 35px;
+}
+@media (min-width: 0) and (max-width: 768px) {
+  .conqueror-app .header .navigation > div .nav-menu .icons {
+    order: 1;
+    align-self: end;
+  }
+}
+.conqueror-app .header .navigation > div .nav-menu .icons img {
+  width: 25px;
+}
+.conqueror-app .header .navigation > div .nav-menu .icons a {
   padding: 21px 0;
 }
 .conqueror-app .all-challenges {

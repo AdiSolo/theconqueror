@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const myDiv = document.getElementById("hamburger-menu");
+
+  myDiv.addEventListener("click", function () {
+    // Toggle the 'active' class on click
+    let menu = document.getElementsByClassName("menu")[0];
+    menu.classList.toggle("active");
+  });
+});
+
 fetch("challenges.json")
   .then((response) => response.json())
   .then((data) => {
@@ -60,3 +70,33 @@ function attachEventListenersToButtons() {
     });
   });
 }
+function displayCartItems() {
+  // Retrieve the cart items from localStorage
+  const storedCartItems = JSON.parse(localStorage.getItem("cart"));
+
+  if (storedCartItems) {
+    // Create a summary of the cart items
+    let summary = storedCartItems
+      .map((item) => {
+        return `
+        
+        <tr>
+        <td>${item.id}</td>
+        <td>    ${item.name} </td>
+        <td>${item.price}</td>
+    </tr>`;
+      })
+      .join("");
+    let total = storedCartItems.reduce((accumulator, currentItem) => {
+      return accumulator + Number(currentItem.price);
+    }, 0);
+    console.log(total);
+
+    // Display the summary (adjust based on your HTML structure)
+    document.getElementById("cart-summary").innerHTML = summary;
+    document.getElementById("total-price").innerHTML = total;
+  }
+  console.log(storedCartItems);
+}
+displayCartItems();
+// Call the function to display items on page load
