@@ -209,6 +209,7 @@ body > * {
   justify-content: flex-end;
 }
 .conqueror-app .header .navigation > div .nav-menu {
+  position: relative;
   display: flex;
   width: 100%;
   justify-content: flex-end;
@@ -265,11 +266,44 @@ body > * {
     display: block;
   }
 }
-.conqueror-app .header .navigation > div .nav-menu .icons #hamburger-menu img {
+.conqueror-app .header .navigation > div .nav-menu .icons a.cart-btn {
+  padding: 21px 0;
+}
+.conqueror-app .header .navigation > div .nav-menu .icons a.cart-btn img {
   width: 25px;
 }
-.conqueror-app .header .navigation > div .nav-menu .icons a {
-  padding: 21px 0;
+.conqueror-app .header .navigation > div .nav-menu .icons a.cart-btn #count_cart {
+  position: relative;
+  bottom: 17px;
+  display: none;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  color: #fff;
+  background: red;
+  align-items: center;
+  border-radius: 50px;
+  padding: 4px;
+}
+.conqueror-app .header .navigation > div .nav-menu .icons a.cart-btn #count_cart.active {
+  display: inline-flex;
+}
+.conqueror-app .header .navigation > div .nav-menu .cart-preview {
+  display: none;
+  position: absolute;
+  top: 85px;
+  right: 10px;
+  min-width: 180px;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid silver;
+  padding: 13px;
+  border-radius: 5px;
+  gap: 20px;
+  z-index: 1000;
+}
+.conqueror-app .header .navigation > div .nav-menu .cart-preview.active {
+  display: flex !important;
 }
 .conqueror-app .all-challenges {
   display: flex;

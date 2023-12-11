@@ -49,6 +49,17 @@ fetch("challenges.json")
 /*
 ----- Add items in local storage on click event -----
 */
+function addActiveClassById(elementId) {
+  // Get the element by ID
+  const element = document.getElementById(elementId);
+
+  // If the element exists, add the 'active' class
+  if (element) {
+    element.classList.add("active");
+    console.log(element);
+  }
+}
+
 // Initialize an empty array to store product details
 let cartItems = [];
 
@@ -64,6 +75,10 @@ function attachEventListenersToButtons() {
       console.log(cartItems);
       // Store the updated array in localStorage
       localStorage.setItem("cart", JSON.stringify(cartItems));
+      count_cart();
+      displayCartItems();
+      addActiveClassById("cart-box");
+      addActiveClassById("count_cart");
     });
   });
 }
@@ -72,33 +87,59 @@ function attachEventListenersToButtons() {
 ----- Display cart data from local storage -----
 */
 
-function displayCartItems() {
+function count_cart() {
+  const storedCartItems = localStorage.getItem("cart");
+  if (storedCartItems) {
+    // Parse the string back into an array
+    const cartArray = JSON.parse(storedCartItems);
+
+    document.getElementById("count_cart").innerHTML = cartArray.length;
+  } else {
+    // If there are no items in the cart, set the count to 0
+    document.getElementById("count_cart").innerHTML = 0;
+  }
+}
+
+function displayCartItems(format) {
   // Retrieve the cart items from localStorage
   const storedCartItems = JSON.parse(localStorage.getItem("cart"));
+  let summary = []; // Initialize summary as an empty array
 
   if (storedCartItems) {
-    // Create a summary of the cart items
-    let summary = storedCartItems
-      .map((item) => {
-        return `
-        
-        <tr>
-        <td>${item.id}</td>
-        <td>    ${item.name} </td>
-        <td>${item.price}</td>
-    </tr>`;
-      })
-      .join("");
+    if (format === "table") {
+      // Update the summary for table format
+      summary = storedCartItems
+        .map((item) => {
+          return `
+            <tr>
+              <td>${item.id}</td>
+              <td>${item.name}</td>
+              <td>${item.price}</td>
+            </tr>`;
+        })
+        .join("");
+    } else {
+      // Update the summary for list format
+      summary = storedCartItems
+        .map((item) => `Id: ${item.id} Title: ${item.name}<br>`)
+        .join("");
+    }
+
     let total = storedCartItems.reduce((accumulator, currentItem) => {
       return accumulator + Number(currentItem.price);
     }, 0);
-    console.log(total);
 
-    // Display the summary (adjust based on your HTML structure)
+    // Display the summary and total price
     document.getElementById("cart-summary").innerHTML = summary;
-    document.getElementById("total-price").innerHTML = total;
+    let has_total = document.getElementById("total-price");
+    if (has_total) {
+      has_total.innerHTML = total;
+    }
   }
-  console.log(storedCartItems);
 }
-displayCartItems();
+if (document.getElementById("summary")) {
+  displayCartItems("table");
+  console.log("Test");
+}
+
 // Call the function to display items on page load
