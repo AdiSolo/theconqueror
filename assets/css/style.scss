@@ -92,9 +92,6 @@ body > * {
 
             a.cart-btn {
               padding: 21px 0;
-              img {
-                width: 25px;
-              }
               #count_cart {
                 position: relative;
                 bottom: 17px;
@@ -111,6 +108,9 @@ body > * {
                   display: inline-flex;
                 }
               }
+            }
+            img {
+              width: 25px;
             }
           }
           .cart-preview {

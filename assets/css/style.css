@@ -269,9 +269,6 @@ body > * {
 .conqueror-app .header .navigation > div .nav-menu .icons a.cart-btn {
   padding: 21px 0;
 }
-.conqueror-app .header .navigation > div .nav-menu .icons a.cart-btn img {
-  width: 25px;
-}
 .conqueror-app .header .navigation > div .nav-menu .icons a.cart-btn #count_cart {
   position: relative;
   bottom: 17px;
@@ -287,6 +284,9 @@ body > * {
 }
 .conqueror-app .header .navigation > div .nav-menu .icons a.cart-btn #count_cart.active {
   display: inline-flex;
+}
+.conqueror-app .header .navigation > div .nav-menu .icons img {
+  width: 25px;
 }
 .conqueror-app .header .navigation > div .nav-menu .cart-preview {
   display: none;
